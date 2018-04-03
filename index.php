@@ -35,9 +35,9 @@
                                 Some stuff goes here
                         </div>
                 </div>  
-		<div class="tile" id="fb">
+		<div class="tile" id="pt">
                         <div class="tophalf">
-                                <img class="icon"> Facebook
+                                <img class="icon"> Pintrest
                         </div>
                         <div class="api-return">
                                 Some stuff goes here
@@ -59,9 +59,9 @@
                                 Some stuff goes here
                         </div>
 		</div>
-		<div class="tile" id="fb"> 
+		<div class="tile" id="ig"> 
                         <div class="tophalf">
-                                <img class="icon"> Facebook
+                                <img class="icon"> Instagram 
                         </div>
                         <div class="api-return">
                                 Some stuff goes here
@@ -75,9 +75,9 @@
                                 Some stuff goes here
                         </div>
                 </div>
-		<div class="tile" id="tw"> 
+		<div class="tile" id="yt"> 
                         <div class="tophalf">
-                                <img class="icon"> Twitter  
+                                <img class="icon"> YouTube  
                         </div>
                         <div class="api-return">
                                 Some stuff goes here
