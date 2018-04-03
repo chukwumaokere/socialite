@@ -18,14 +18,16 @@ body{
 	bottom: 0;
 	width: 100%;
 	height: 10%;
+	z-index: 2;
 }
 .contents{
-	margin-top:6%;
-	margin-bottom: 6%;
+	margin-top: 155px;
+	margin-bottom: 170px;
 }
 
 .icon{
-	width: 3%;
+	margin: 10px;
+	width: 100px;
 }
 .logo{
 	margin: 2% !important;
@@ -36,13 +38,18 @@ body{
 
 .header-links{
 	height: 100%;
-	padding: 50px;
+	padding: 40px;
 	font-size: 50px;
 	margin: 0 auto;
 	text-align: center;
+	padding-right: 40px !important;
 }
 .header-links a{
 	color:black;
+	
+}
+.header-links a:active, a:hover{
+	text-decoration: none !important;
 }
 
 .header-links.active{
@@ -62,14 +69,17 @@ body{
         bottom: 0;
         width: 100%;
         height: 10%;
+	z-index: 2;
 }
 
 .tile{
 	background-color:white;
 #	padding: 20%;
-	max-height: 20%;
-	margin-top: 1%;
-	margin-bottom: 1%;
-	padding: 1%;
+	max-height: 500px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	font-size: 55px;
+	height: 800px;
 }
 

@@ -12,9 +12,9 @@
 <div class="app-contents">
 	<div id="header" class="header">
 	<div class="row">
-		<div class="col-xs-2"><img class="logo" src="public/images/icon.png"></div>
+		<div class="col-xs-2"><a href="/socialite/"><img class="logo" src="public/images/icon.png"></a></div>
 		<div class="col-xs-5 header-links active"><a href="#home">Home</a></div>
-		<div class="col-xs-4 header-links"><a href="#Other">Other</a></div>
+		<div class="col-xs-5 header-links"><a href="#Other">Other</a></div>
 	</div>
 	</div>
 
