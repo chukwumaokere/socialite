@@ -24,6 +24,31 @@ body{
 	margin-bottom: 6%;
 }
 
+.icon{
+	width: 3%;
+}
+.logo{
+	margin: 2% !important;
+	width: 125px;
+   	padding-top: 40px;
+    	padding-left: 30px;
+}
+
+.header-links{
+	height: 100%;
+	padding: 50px;
+	font-size: 50px;
+	margin: 0 auto;
+	text-align: center;
+}
+.header-links a{
+	color:black;
+}
+
+.header-links.active{
+	border-bottom: solid 4px orange;
+}
+
 #scrollable-content {
   height: 30%;
   overflow: auto;
