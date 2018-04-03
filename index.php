@@ -21,7 +21,7 @@
 	<div class="contents" id="scrollable-content">
 		<div class="tile" id="fb">
 			<div class="tophalf">
-				<img class="icon">
+				<img class="icon"> Facebook
 			</div>
 			<div class="api-return">
 				Some stuff goes here
@@ -29,7 +29,7 @@
 		</div>	
 		<div class="tile" id="fb">
                         <div class="tophalf">
-                                <img class="icon">
+                                <img class="icon"> Facebook
                         </div>
                         <div class="api-return">
                                 Some stuff goes here
@@ -37,48 +37,47 @@
                 </div>  
 		<div class="tile" id="fb">
                         <div class="tophalf">
-                                <img class="icon">
+                                <img class="icon"> Facebook
                         </div>
                         <div class="api-return">
                                 Some stuff goes here
                         </div>
                 </div>  
-		
-		<div class="tile" id="yt">
+		<div class="tile" id="yt"> 
 			<div class="tophalf">
-				<img class="icon">
+				<img class="icon"> YouTube
                         </div>
                         <div class="api-return">
                                 Some stuff goes here
                         </div>
 		</div>
-		<div class="tile" id="tw">
+		<div class="tile" id="tw"> 
 			<div class="tophalf">
-				<img class="icon">	
+				<img class="icon"> Twitter
                         </div>
                         <div class="api-return">
                                 Some stuff goes here
                         </div>
 		</div>
-		<div class="tile" id="fb">
+		<div class="tile" id="fb"> 
                         <div class="tophalf">
-                                <img class="icon">
+                                <img class="icon"> Facebook
                         </div>
                         <div class="api-return">
                                 Some stuff goes here
                         </div>
                 </div>  
-		<div class="tile" id="tw">
-                        <div class="tophalf">
-                                <img class="icon">          
+		<div class="tile" id="tw"> 
+                        <div class="tophalf"> 
+                                <img class="icon"> Twitter
                         </div>
                         <div class="api-return">
                                 Some stuff goes here
                         </div>
                 </div>
-		<div class="tile" id="tw">
+		<div class="tile" id="tw"> 
                         <div class="tophalf">
-                                <img class="icon">          
+                                <img class="icon"> Twitter  
                         </div>
                         <div class="api-return">
                                 Some stuff goes here
