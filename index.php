@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title></title>
+<title>Socialite: All your social media in one place</title>
 
 <head>
 <link href='public/css/style.css' rel='stylesheet'></link> 
@@ -86,7 +86,7 @@
 	</div>
 
 	<div id="footer" class="footer"></div>
-	<script>
+<script>
 $(document).ready(function() {
         var selector = document.getElementsByClassName('tile');
         var totalitems = selector.length;
@@ -96,19 +96,9 @@ $(document).ready(function() {
 		var selectedid = selected.id;
                 console.log(selectedid);
 		if (selectedid){
-		//	$(this).find('img').attr('src', function(){ return "public/images/" + this.id});
-			//$(this).find('img').attr('src', "public/images/" + $(this).parent.parent.id + '.png');
-			//$(this).children("img").attr('src', 'something');
-			$(`#${selectedid}`).children("img").attr('src', selectedid + '.png');
-			//$("div#fb img").attr('src', 'public/images/fb.png');
 			$(`div#${selectedid} img`).attr('src', `public/images/${selectedid}.png`);
-			console.log($("#fb").children("img").attr('src', 'public/images/fb.png'));
-			//console.log($("#fb").children("img"));
-			//console.log($("img"));
 		}
                 x++;
-	//	$("img").attr('src', function(){ return "public/images/" + this.id})
-	//console.log($("img"));
         }
 });
 </script>
