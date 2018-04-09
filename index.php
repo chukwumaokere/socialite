@@ -14,7 +14,7 @@
 	<div class="row">
 		<div class="col-xs-2"><a href="/socialite/"><img class="logo" src="public/images/icon.png"></a></div>
 		<div class="col-xs-5 header-links active"><a href="#home">Home</a></div>
-		<div class="col-xs-5 header-links"><a href="#Other">Other</a></div>
+		<div class="col-xs-5 header-links"><a href="#byapp">By App</a></div>
 	</div>
 	</div>
 
