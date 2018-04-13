@@ -35,8 +35,8 @@ global $db;
 		}
 	}
 	if ($err == 0){
-		$check = $db->query("SELECT * FROM users WHERE email = $email");
-		$checktwo = $db->query("SELECT * FROM users WHERE username = $username");
+		$check = $db->query("SELECT * FROM users WHERE email = '$email'");
+		$checktwo = $db->query("SELECT * FROM users WHERE username = '$username'");
 		if ($check->num_rows > 0){
 			$errt = 1;
 			$msg .= $pre . 'Account with that Email already exists!';
@@ -48,12 +48,14 @@ global $db;
 			//echo json_encode('Account with that Username already exists!');
 		}
 		if ($errt == 0){
-			$add = $db->query("INSERT INTO users VALUES (NULL, $username, $password, $firstn, $lastn, $phone, NULL, NULL, NULL)");
+			$q = "INSERT INTO users (username, password, firstname, lastname, phonenumber, last_login, logged_in, session_key) VALUES ('$username', '$password', '$firstn', '$lastn', '$phone', NULL, NULL, NULL)";
+			$add = $db->query($q);
 			if ($add){
 				$msg .= 'Account Created Successfully!';
 				//echo json_encode('Account Created Successfully!');
 			}else{
 				$msg .= 'Account creation failed. Please try again';
+				//$msg .= "\n $q";
 				//echo json_encode('Account creation failed. Please try again');
                         }
 		}
