@@ -39,16 +39,20 @@ global $db;
 		$checktwo = $db->query("SELECT * FROM users WHERE username = '$username'");
 		if ($check->num_rows > 0){
 			$errt = 1;
-			$msg .= $pre . 'Account with that Email already exists!';
+			$msg .= $pre . "Account with that Email already exists! \n";
                        // echo json_encode('Account with that Email already exists!');
                 }
 		if($checktwo->num_rows > 0){
 			$errt = 1;
-			$msg .= $pre . 'Account with that Username already exists!';
+			if ($msg == ''){
+				$msg .= $pre . "Account with that Username already exists! \n ";
+			}else{
+				$msg .= "Account with that Username already exists! \n ";
+			}
 			//echo json_encode('Account with that Username already exists!');
 		}
 		if ($errt == 0){
-			$q = "INSERT INTO users (username, password, firstname, lastname, phonenumber, last_login, logged_in, session_key) VALUES ('$username', '$password', '$firstn', '$lastn', '$phone', NULL, NULL, NULL)";
+			$q = "INSERT INTO users (username, password, firstname, lastname, email, phonenumber, last_login, logged_in, session_key) VALUES ('$username', '$password', '$firstn', '$lastn', '$email', '$phone', NULL, NULL, NULL)";
 			$add = $db->query($q);
 			if ($add){
 				$msg .= 'Account Created Successfully!';
