@@ -1,5 +1,5 @@
 <?php 
-include '../../db.php';
+include '../../../db.php';
 global $db;
 	$json = file_get_contents('php://input');
 
