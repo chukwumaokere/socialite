@@ -61,7 +61,7 @@ global $db;
 			}
                 }else{
 			$errt = 1;
-			$msg .= "No account found with the entered information \n $q\n ";
+			$msg .= "No account found with the entered information";
 		}
 		if ($errt == 0){
 			$msg .= "Login Successful! \n";
