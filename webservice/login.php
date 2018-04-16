@@ -53,7 +53,7 @@ global $db;
 				$enteredUN = $reqfields['username'];
                         	$enteredPW = $reqfields['password'];	
 				if ($retrievedPW && $retrievedUN && $enteredUN && $enteredPW){
-					 if ( ($enteredUN != $retrievedUN) || $enteredPW != $retrievedPW){
+					 if ( (strtolower($enteredUN) != strtolower($retrievedUN)) || $enteredPW != $retrievedPW){
 						$errt = 1; 
                                         	$msg .= "Could not log in with that info. \n Please check your Username and Password. \n";
 					 }
