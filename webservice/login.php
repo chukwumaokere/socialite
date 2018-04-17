@@ -79,6 +79,9 @@ global $db;
 						   'lastname' => $retrievedLN,
 						   'email' => $retrievedEM,
 						   'phone' => $retrievedPN,
+						   'birthday' => $retrievedBD,
+						   'date_signed_up' => $retrievedSD,
+						   'profilepic' => $retrievedPP,
 							],
 					);
                 }
