@@ -11,7 +11,9 @@ global $db;
 	$phone = $obj['phone'];
 	$firstn = $obj['firstname'];
 	$lastn = $obj['lastname'];
-	
+	$dob =  DateTime::createFromFormat('F d, Y', $obj['dob']);
+	$newdob = $dob->format('Y-m-d');
+	$date = date('Y-m-d H:i:s');
 	$fields = [
 		'username' => $username,
 		'password' => $password,
@@ -52,7 +54,7 @@ global $db;
 			//echo json_encode('Account with that Username already exists!');
 		}
 		if ($errt == 0){
-			$q = "INSERT INTO users (username, password, firstname, lastname, email, phonenumber, last_login, logged_in, session_key) VALUES ('$username', '$password', '$firstn', '$lastn', '$email', '$phone', NULL, NULL, NULL)";
+			$q = "INSERT INTO users (username, password, firstname, lastname, email, phonenumber, dob, last_login, logged_in, session_key, date_signed_up) VALUES ('$username', '$password', '$firstn', '$lastn', '$email', '$phone', '$newdob', NULL, NULL, NULL, '$date')";
 			$add = $db->query($q);
 			if ($add){
 				$msg .= 'Account Created Successfully!';
