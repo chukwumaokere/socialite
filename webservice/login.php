@@ -48,8 +48,14 @@ global $db;
 		if ($check->num_rows > 0){ 
 			
 			while ($row = $check->fetch_assoc() ){
+
 				$retrievedPW = $row['password']; 
 				$retrievedUN = $row['username'];
+				$retrievedFN = $row['firstname'];
+				$retrievedLN = $row['lastname'];
+				$retrievedEM = $row['email'];
+				$retrievedPN = $row['phonenumber'];
+
 				$enteredUN = $reqfields['username'];
                         	$enteredPW = $reqfields['password'];	
 				if ($retrievedPW && $retrievedUN && $enteredUN && $enteredPW){
@@ -64,7 +70,14 @@ global $db;
 			$msg .= "No account found with the entered information";
 		}
 		if ($errt == 0){
-			$msg .= "Login Successful! \n";
+			$text .= "Login Successful! \n";
+			$msg = array('response' => $text,
+					'data' => ['firstname' => $retrievedFN,
+						   'lastname' => $retrievedLN,
+						   'email' => $retrievedEM,
+						   'phone' => $retrievedPN,
+							],
+					);
                 }
 	}else{
 		$msg = $pre . $msg;
