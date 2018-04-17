@@ -42,7 +42,7 @@ global $db;
 		}
 	}
 	if ($err == 0){
-		$q = "SELECT * FROM users WHERE username = '$username'";
+		$q = "SELECT * FROM users WHERE username = '$username' (deleted IS NULL OR deleted != 1)";
 		$check = $db->query($q);
 	//	$check = $db->query("SELECT * FROM users WHERE username = '$username'");
 		if ($check->num_rows > 0){ 
@@ -55,6 +55,9 @@ global $db;
 				$retrievedLN = $row['lastname'];
 				$retrievedEM = $row['email'];
 				$retrievedPN = $row['phonenumber'];
+				$retrievedBD = $row['dob'];
+				$retrievedSD = $row['date_signed_up'];
+				$retrievedPP = $row['profilepic'];
 
 				$enteredUN = $reqfields['username'];
                         	$enteredPW = $reqfields['password'];	
