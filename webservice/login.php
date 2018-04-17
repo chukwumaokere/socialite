@@ -42,7 +42,7 @@ global $db;
 		}
 	}
 	if ($err == 0){
-		$q = "SELECT * FROM users WHERE username = '$username' (deleted IS NULL OR deleted != 1)";
+		$q = "SELECT * FROM users WHERE username = '$username' AND (deleted IS NULL OR deleted != 1)";
 		$check = $db->query($q);
 	//	$check = $db->query("SELECT * FROM users WHERE username = '$username'");
 		if ($check->num_rows > 0){ 
