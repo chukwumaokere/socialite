@@ -58,6 +58,7 @@ global $db;
 				$retrievedBD = $row['dob'];
 				$retrievedSD = $row['date_signed_up'];
 				$retrievedPP = $row['profilepic'];
+				$retrievedHL = $row['handlelinks'];
 
 				$enteredUN = $reqfields['username'];
                         	$enteredPW = $reqfields['password'];	
@@ -82,6 +83,7 @@ global $db;
 						   'birthday' => $retrievedBD,
 						   'date_signed_up' => $retrievedSD,
 						   'profilepic' => $retrievedPP,
+						   'handlelinks' => $retrievedHL,
 							],
 					);
                 }
