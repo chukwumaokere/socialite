@@ -27,9 +27,18 @@ global $db;
 	$base = 'UPDATE users SET ';
 	$addon = '';
 	foreach ($obj AS $fieldname => $value){
-		if ($fieldname != 'id'){
-			$addon .= "$fieldname = \"$value\", ";
+		if ($fieldname == 'handlelinks' && $value == ''){
+			$value = 0;
 		}
+		if ($fieldname == 'handlelinks' && $value == '0'){
+                        $value = 0;
+                }
+		if ($fieldname == 'handlelinks' && $value == '1'){
+                        $value = 1;
+                }
+		if ($fieldname != 'id'){
+                        $addon .= "$fieldname = \"$value\", ";
+                }
 	}
 	$addon = rtrim($addon, ', ');
 	$addon .= ' ';
@@ -37,7 +46,7 @@ global $db;
 	$q = $base . $addon . $where;
 
 	$db->query($q);
-	echo json_encode("Change Successful!");
+	echo json_encode("$q");
 
 //$sm = print_r($obj, true);
 //file_put_contents("dumpobj.txt", $sm);

@@ -60,7 +60,11 @@ global $db;
 				$retrievedPP = $row['profilepic'];
 				$retrievedHL = $row['handlelinks'];
 				//$retrievedHL = settype($retrievedHL, 'boolean');
-
+				if ($retrievedHL == '0'){
+					$retrievedHL = false;
+				}else{
+					$retrievedHL = true;
+				}
 				$enteredUN = $reqfields['username'];
                         	$enteredPW = $reqfields['password'];	
 				if ($retrievedPW && $retrievedUN && $enteredUN && $enteredPW){
