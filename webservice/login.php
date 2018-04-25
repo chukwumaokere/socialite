@@ -48,7 +48,7 @@ global $db;
 		if ($check->num_rows > 0){ 
 			
 			while ($row = $check->fetch_assoc() ){
-
+				$retrievedID = $row['id'];
 				$retrievedPW = $row['password']; 
 				$retrievedUN = $row['username'];
 				$retrievedFN = $row['firstname'];
@@ -59,6 +59,7 @@ global $db;
 				$retrievedSD = $row['date_signed_up'];
 				$retrievedPP = $row['profilepic'];
 				$retrievedHL = $row['handlelinks'];
+				//$retrievedHL = settype($retrievedHL, 'boolean');
 
 				$enteredUN = $reqfields['username'];
                         	$enteredPW = $reqfields['password'];	
@@ -76,7 +77,8 @@ global $db;
 		if ($errt == 0){
 			$text .= "Login Successful! \n";
 			$msg = array('response' => $text,
-					'data' => ['firstname' => $retrievedFN,
+					'data' => ['id' => $retrievedID,
+						   'firstname' => $retrievedFN,
 						   'lastname' => $retrievedLN,
 						   'email' => $retrievedEM,
 						   'phone' => $retrievedPN,
