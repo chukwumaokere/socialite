@@ -46,7 +46,7 @@ global $db;
 	$q = $base . $addon . $where;
 
 	$db->query($q);
-	echo json_encode("$q");
+	echo json_encode("Change Successful!");
 
 //$sm = print_r($obj, true);
 //file_put_contents("dumpobj.txt", $sm);
